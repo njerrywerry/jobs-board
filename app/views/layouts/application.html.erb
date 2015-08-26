@@ -7,11 +7,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<% Category.all.each do |category| %>
-<%= link_to category.name, jobs_path(category: category.name) %>
-<% end %>
 
+  <nav class = "navbar navbar-default">
+    <div class = "container">
+      <a class = "navbar-brand", href="localhost:3000">Makazi</a>
+      <ul class = "nav navbar-nav">
+        <li><%= link_to "All Jobs", root_path %></li>
+        <% Category.all.each do |category| %>
+        <li><%= link_to category.name, jobs_path(category: category.name) %></li>
+        <% end %>
+        </ul>
+    </div>
+  </nav>
+
+<div class = "container">
 <%= yield %>
-
+</div>
 </body>
 </html>
