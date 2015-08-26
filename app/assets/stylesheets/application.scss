@@ -1,2 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#jobs {
+  .job {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+body {
+  background: rgba(71, 218, 255, 0.2);
+}
