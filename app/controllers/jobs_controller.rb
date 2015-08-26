@@ -40,7 +40,7 @@ end
 
   private
   def jobs_params
-   params.require(:job).permit(:title, :company, :url)
+   params.require(:job).permit(:title, :company, :url, :category_id)
   end
 
   def find_job
