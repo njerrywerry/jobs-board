@@ -16,7 +16,7 @@ end
   def create
     @job = Job.new(jobs_params)
     if @job.save
-      redirect_to root_path
+      redirect_to @job
     else
       render "new"
     end
@@ -37,7 +37,7 @@ end
   end
 
   def find_job
-    @job = Job.find(params)[:id]
+    @job = Job.find(params[:id])
   end
 
 end
