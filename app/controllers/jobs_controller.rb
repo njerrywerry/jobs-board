@@ -20,7 +20,7 @@ end
   end
 
   def create
-    @job = Job.new(jobs_params)
+    @job = current_user.jobs.new(jobs_params)
     if @job.save
       redirect_to root_path
     else
