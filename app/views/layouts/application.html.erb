@@ -16,7 +16,9 @@
         <% Category.all.each do |category| %>
         <li><%= link_to category.name, jobs_path(category: category.name) %></li>
         <% end %>
+        <% if user_signed_in? %>
         <%= link_to "New Job", new_job_path, class: "navbar-text navbar-link" %>
+        <% end %>
       </ul>
 
       <ul class = "nav navbar-nav navbar-right">

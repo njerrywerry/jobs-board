@@ -9,6 +9,8 @@
 
 <div id = "links">
 <%= link_to "Home", root_path, class: "btn btn-primary" %>
+<% if user_signed_in? %>
 <%= link_to "Edit", edit_job_path, class: "btn btn-primary" %>
 <%= link_to "Delete", job_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-primary" %>
+<% end %>
 </div>
